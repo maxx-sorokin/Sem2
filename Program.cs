@@ -22,17 +22,28 @@ int FindMaxValue(int number)
     return max;
 }
 
-int randomNumber = GetRandomNumber(10, 100);
+int DeleteSecondDigit(int number)
+{
+    int lastNumber = number % 10;
+    number = number / 100;
+    
+    int newNumber = number * 10 + lastNumber;
+
+    return newNumber;
+}
+
+int randomNumber = GetRandomNumber(100, 1000);
 Console.WriteLine(randomNumber);
 
-int maxValue = FindMaxValue(randomNumber);
-Console.WriteLine(maxValue);
+int number2 = DeleteSecondDigit(randomNumber);
+Console.WriteLine(number2);
 
-int array = new int[5];
 
-for (int i = 0; i < array.Length; i++)
-{
-    int lastValue = number % 10;
-    array[i] = lastValue;
-    number = number / 10;
-}
+// int array = new int[5];
+
+// for (int i = 0; i < array.Length; i++)
+// {
+//     int lastValue = number % 10;
+//     array[i] = lastValue;
+//     number = number / 10;
+// }
