@@ -48,17 +48,9 @@ bool CheckSquare(int firstNumber, int secondNumber)
     return square1 == secondNumber | square2 == firstNumber;
 }
 
-
 Console.WriteLine("Введите два числа");
 int A = Convert.ToInt32(Console.ReadLine());
 int B = Convert.ToInt32(Console.ReadLine());
-
-// int remainsNumber = CheckMultiplicity(A, B);
-
-// Console.WriteLine("Введите число");
-// int A = Convert.ToInt32(Console.ReadLine());
-
-// bool result = CheckMultiplicity(A);
 
 bool result = CheckSquare(A, B);
 
@@ -70,6 +62,13 @@ else
 {
     Console.WriteLine($"Нет");
 }
+
+// int remainsNumber = CheckMultiplicity(A, B);
+
+// Console.WriteLine("Введите число");
+// int A = Convert.ToInt32(Console.ReadLine());
+
+// bool result = CheckMultiplicity(A);
 
 // int randomNumber = GetRandomNumber(100, 1000);
 // Console.WriteLine(randomNumber);
