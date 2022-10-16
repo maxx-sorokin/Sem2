@@ -61,6 +61,17 @@ bool CheckSquare(int firstNumber, int secondNumber)
     return square1 == secondNumber | square2 == firstNumber;
 }
 
+// Добавление в массив всех цифр числа
+
+// int[] array = new int[5];
+
+// for (int i = 0; i < array.Length; i++)
+// {
+//     int lastValue = number % 10;
+//     array[i] = lastValue;
+//     number = number / 10;
+// }
+
 Console.Clear();
 Console.WriteLine("Введите номер задачи: 9, 11, 12, 14 или 16");
 int z = Convert.ToInt32(Console.ReadLine());
@@ -140,12 +151,3 @@ if (z == 16)
         Console.WriteLine($"Одно число НЕ является квадратом другого числа");
     }
 }
-
-// int array = new int[5];
-
-// for (int i = 0; i < array.Length; i++)
-// {
-//     int lastValue = number % 10;
-//     array[i] = lastValue;
-//     number = number / 10;
-// }
