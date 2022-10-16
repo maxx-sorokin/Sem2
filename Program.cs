@@ -1,10 +1,12 @@
-﻿int GetRandomNumber(int minValue, int maxValue)
+﻿// метод - выводит случайное число в заданном интервале
+int GetRandomNumber(int minValue, int maxValue)
 {
     Random random = new Random();
     int randomNumber = random.Next(minValue, maxValue);
     return randomNumber;
 }
 
+// метод - находит и выводит максимальную цифру в числе
 int FindMaxValue(int number)
 {
     int max = number % 10;
@@ -22,6 +24,7 @@ int FindMaxValue(int number)
     return max;
 }
 
+// метод для задачи 11 - удаляет второе число в трёхзначном числе
 int DeleteSecondDigit(int number)
 {
     int lastNumber = number % 10;
@@ -32,6 +35,7 @@ int DeleteSecondDigit(int number)
     return newNumber;
 }
 
+// метод для задачи 12 - выводит остаток от деления перовго числа на второе
 int CheckMultiplicity(int firstNumber, int secondNumber)
 {
     int remains = firstNumber % secondNumber;
@@ -39,6 +43,7 @@ int CheckMultiplicity(int firstNumber, int secondNumber)
     return remains;
 }
 
+// метод для задачи 14 - проверка: является ли число кратно одновременно 7 и 23
 bool CheckMultiplicity723(int firstNumber)
 {
     int remains1 = firstNumber % 7;
@@ -47,6 +52,7 @@ bool CheckMultiplicity723(int firstNumber)
     return remains1 == 0 & remains2 == 0;
 }
 
+// метод для задачи 16 - проверка: является ли одно число квадратом другого
 bool CheckSquare(int firstNumber, int secondNumber)
 {
     int square1 = firstNumber * firstNumber;
@@ -56,17 +62,27 @@ bool CheckSquare(int firstNumber, int secondNumber)
 }
 
 Console.Clear();
-Console.WriteLine("Введите номер задачи: 11, 12, 14 или 16");
+Console.WriteLine("Введите номер задачи: 9, 11, 12, 14 или 16");
 int z = Convert.ToInt32(Console.ReadLine());
+
+// Задача 9
+if (z == 9)
+{
+    int randomNumber9 = GetRandomNumber(10, 100);
+    Console.WriteLine($"Случайное двузначное число - {randomNumber9}");
+
+    int maxDigit = FindMaxValue(randomNumber9);
+    Console.WriteLine($"Максимальная цифра в этом числе - {maxDigit}");
+}
 
 // Задача 11
 if (z == 11)
 {
-    int randomNumber = GetRandomNumber(100, 1000);
-    Console.WriteLine(randomNumber);
+    int randomNumber11 = GetRandomNumber(100, 1000);
+    Console.WriteLine(randomNumber11);
 
-    int number2 = DeleteSecondDigit(randomNumber);
-    Console.WriteLine(number2);
+    int number11 = DeleteSecondDigit(randomNumber11);
+    Console.WriteLine(number11);
 }
 
 // Задача 12
