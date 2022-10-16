@@ -40,33 +40,35 @@
 //     return remains1 == 0 & remains2 == 0;
 // }
 
-bool CheckSquare(int firstNumber)
+bool CheckSquare(int firstNumber, int secondNumber)
 {
-    int square = firstNumber % 7;
-    int remains2 = firstNumber % 23;
+    int square1 = firstNumber * firstNumber;
+    int square2 = secondNumber * secondNumber;
 
-    return remains1 == 0 & remains2 == 0;
+    return square1 == secondNumber | square2 == firstNumber;
 }
 
 
-// Console.WriteLine("Введите два числа");
-// int A = Convert.ToInt32(Console.ReadLine());
-// int B = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите два числа");
+int A = Convert.ToInt32(Console.ReadLine());
+int B = Convert.ToInt32(Console.ReadLine());
 
 // int remainsNumber = CheckMultiplicity(A, B);
 
-Console.WriteLine("Введите число");
-int A = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число");
+// int A = Convert.ToInt32(Console.ReadLine());
 
-bool result = CheckMultiplicity(A);
+// bool result = CheckMultiplicity(A);
+
+bool result = CheckSquare(A, B);
 
 if (result)
 {
-    Console.WriteLine("Кратно");
+    Console.WriteLine("Да");
 }
 else
 {
-    Console.WriteLine($"Не кратно");
+    Console.WriteLine($"Нет");
 }
 
 // int randomNumber = GetRandomNumber(100, 1000);
