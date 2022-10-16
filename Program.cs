@@ -27,3 +27,12 @@ Console.WriteLine(randomNumber);
 
 int maxValue = FindMaxValue(randomNumber);
 Console.WriteLine(maxValue);
+
+int array = new int[5];
+
+for (int i = 0; i < array.Length; i++)
+{
+    int lastValue = number % 10;
+    array[i] = lastValue;
+    number = number / 10;
+}
